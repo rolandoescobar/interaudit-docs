@@ -1,0 +1,80 @@
+---
+title: "Proyectos · No conformidades y acciones"
+description: "Registrar no conformidades, planificar acciones correctivas/preventivas, adjuntar evidencias y cerrar con verificación."
+---
+
+Las **No conformidades (NC)** y **Acciones** permiten gestionar hallazgos de auditorías o desviaciones operativas y darles seguimiento hasta su **cierre verificado**.
+
+![Listado de NC](/images/screens/proyectos/nc/lista.png)
+
+## Antes de empezar
+- Rol recomendado: **Líder de proyecto**, **Gestor** o **Auditor**.
+- Ten claro el **origen del hallazgo** (auditoría, operación, incidente) y si afectó a algún **requisito/control**.
+
+---
+
+## 1) Registrar una **No conformidad**
+1. Ve a **Proyectos → NC y Acciones** y pulsa **Nueva NC**.
+2. Completa:
+   - **Título** y **Descripción** (qué se encontró).
+   - **Origen**: Auditoría / Operación / Incidente.
+   - **Severidad**: Baja · Media · Alta · Crítica.
+   - **Organización/Unidad**, **Responsable** y **Fecha objetivo**.
+   - (Opcional) **Requisito** o **Control** afectado.
+3. **Guardar**.
+
+![Nueva NC](/images/screens/proyectos/nc/nueva.png)
+
+:::note
+Relacionar **Requisito/Control** ayuda a reflejar el impacto en **SoA** y reportes de cumplimiento.
+:::
+
+---
+
+## 2) Planificar **acciones** (correctivas/preventivas)
+1. En la NC, abre **Acciones** → **Añadir acción**.
+2. Define:
+   - **Tipo**: Correctiva / Preventiva.
+   - **Tarea** y **Resultado esperado**.
+   - **Responsable** y **Fecha objetivo**.
+   - **Estado**: Pendiente · En curso · Hecha · Bloqueada.
+   - **Evidencia**: URL/archivo (pruebas de implementación/efectividad).
+3. **Guardar**. Repite para todas las acciones necesarias.
+
+![Acciones de una NC](/images/screens/proyectos/acciones/plan.png)
+
+:::tip
+Si varias acciones conforman un esfuerzo mayor, vincúlalo a un **Proyecto** para seguimiento centralizado.
+:::
+
+---
+
+## 3) Trazabilidad con **Riesgos** y **Proyectos**
+- Desde **Riesgos → Tratamiento**, crea acciones y relaciónalas a la **NC** o al **Proyecto**.
+- En la **NC**, usa el campo de vínculo a **Proyecto** si existe un plan asociado.
+
+**Beneficio:** trazabilidad completa **Riesgo ↔ NC ↔ Acción ↔ Evidencia** para auditoría.
+
+---
+
+## 4) Verificación y **cierre**
+1. Cambia el **estado** de la acción a *Hecha* sólo con **evidencia** cargada.
+2. Un **verificador** (Auditor/Líder) revisa la acción y deja **comentario**.
+3. Cuando **todas** las acciones estén *Hechas y verificadas*, cambia la **NC** a *Cerrada*.
+
+![Seguimiento y verificación](/images/screens/proyectos/seguimiento.png)
+
+:::caution
+Evita cerrar sin evidencia. Define **criterios de aceptación** claros por tipo de hallazgo.
+:::
+
+---
+
+## Filtros y exportación
+- Filtra por **Severidad**, **Estado**, **Responsable**, **Origen**, **Proyecto**, **Fecha**.
+- **Exportar** listado/acciones para comités (CSV/Excel).
+
+## Importar (opcional)
+Carga masiva de **acciones** desde plantilla CSV si tu instancia lo permite.
+
+**Plantilla mínima:**
