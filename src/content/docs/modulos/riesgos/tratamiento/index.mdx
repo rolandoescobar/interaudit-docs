@@ -1,0 +1,110 @@
+---
+title: Riesgos · Tratamiento y residual
+description: Cómo definir la estrategia de tratamiento (evitar/reducir/compartir/aceptar), crear acciones o proyectos, y calcular el riesgo residual.
+---
+
+El tratamiento de un riesgo sigue este flujo: **Elegir estrategia → Planificar acciones/controles → Ejecutar y evidenciar → Re‐evaluar (residual) → Cerrar o aceptar**.
+
+![Detalle del riesgo: pestaña Tratamiento](/images/screens/riesgos/plan-tratamiento.png)
+
+## Antes de empezar
+- Rol recomendado: **Gestor de Seguridad**.
+- Requiere un **riesgo creado** y **valorado** (P×I inherente).
+- Alinea criterios de **apetito/tolerancia** de riesgo y **aprobación**.
+
+---
+
+## 1) Elegir la **estrategia**
+En el riesgo, abre **Tratamiento** y selecciona:
+
+- **Evitar**: cambiar/eliminar la actividad que genera el riesgo.
+- **Reducir**: implementar o reforzar **controles**.
+- **Compartir**: transferir parte del impacto (p. ej., seguro, proveedor).
+- **Aceptar**: asumir el riesgo dentro del **apetito** y con **justificación**.
+
+> Documenta brevemente **por qué** eliges esa estrategia y el **objetivo** esperado.
+
+---
+
+## 2) Plan de acciones (Reducir / Compartir)
+1. Pulsa **Añadir acción**.
+2. Completa:
+   - **Tarea** (qué haremos) y **Resultado esperado**.
+   - **Responsable** y **Fecha objetivo**.
+   - **Evidencia** (URL/archivo) y **Estado** (*Pendiente/En curso/Hecha*).
+3. (Opcional) **Vincula proyecto** si el esfuerzo es grande (*Proyectos → Plan*).
+
+![Añadir acciones de tratamiento](/images/screens/riesgos/acciones.png)
+
+:::tip
+Relaciona **controles SoA** que mitigan el riesgo y sube evidencia de implementación/operación.
+:::
+
+---
+
+## 3) Transferencia (Compartir)
+- Indica **mecanismo** (seguro, outsourcing, contrato de servicio).
+- Adjunta **póliza/contrato** y límites de cobertura.
+- Define **responsable de seguimiento**.
+
+---
+
+## 4) Aceptación del riesgo
+- Justifica por qué está **dentro del apetito** o **no es coste-efectivo** tratarlo.
+- Registra **aprobador** (rol/usuario) y **fecha de revisión** futura.
+
+![Aceptar riesgo y programar revisión](/images/screens/riesgos/aceptacion.png)
+
+---
+
+## 5) Calcular **riesgo residual**
+1. Tras ejecutar acciones/controles, ajusta **Probabilidad (P)** y **Impacto (I)** **residuales**.
+2. Añade **justificación** de los nuevos valores.
+3. El sistema recalcula **P×I residual** y lo muestra en la **matriz**.
+
+![Valor residual y matriz](/images/screens/riesgos/residual.png)
+
+:::note
+No cierres el riesgo hasta que el residual sea **≤ tolerancia** o esté **formalmente aceptado**.
+:::
+
+---
+
+## 6) Cambiar **estado** y cerrar
+- **En tratamiento**: mientras existan acciones abiertas.
+- **Evaluado**: si solo se valoró y no hay plan.
+- **Cerrado**: cuando acciones/evidencias fueron verificadas y el residual cumple criterio.
+- Adjunta **acta/comentario** de cierre.
+
+---
+
+## Criterios de decisión (guía)
+- **Crítico/Alto**: evitar o reducir con **plan formal** y responsables.
+- **Moderado**: reducir o compartir; documentar costo/beneficio.
+- **Bajo**: aceptar con **revisión** programada.
+
+---
+
+## Buenas prácticas
+- Define **KPI** del plan (avance, % controles implementados, vencidos).
+- Evita “marcar como hecho” sin **evidencia** verificable.
+- Revalúa tras **cambios** de proceso, tecnología o incidentes.
+
+## Solución de problemas
+**No puedo vincular controles** → Completa la **SoA** en *Normativa → Controles & SoA*.  
+**El residual no cambia** → Ajusta **P/I residuales** y **guarda**.  
+**No puedo cerrar** → Aún hay **acciones abiertas** o falta **aprobación** de aceptación.
+
+---
+
+## Capturas sugeridas
+Guarda en `public/images/screens/riesgos/`:
+
+- `plan-tratamiento.png` *(pestaña Tratamiento del riesgo)*  
+- `acciones.png` *(formularios de acciones)*  
+- `aceptacion.png` *(justificación y revisión)*  
+- `residual.png` *(valores residuales + matriz)*
+
+Uso en el texto:
+```md
+![Añadir acciones de tratamiento](/images/screens/riesgos/acciones.png)

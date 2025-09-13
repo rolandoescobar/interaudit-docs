@@ -1,0 +1,66 @@
+---
+title: "Riesgos · Indicadores (KPI y métricas)"
+description: >
+  Cómo crear y leer indicadores de riesgo, KPIs sugeridos,
+  visualizaciones y buenas prácticas.
+---
+
+Los **Indicadores** permiten seguir la evolución del **riesgo** y la **eficacia del tratamiento**. Se alimentan de:
+- **Riesgos** (P, I, nivel, estado, residual, etiquetas, responsables)
+- **Tratamientos/Acciones** (avance, vencidos)
+- **Controles/SoA** (implementación, aplicabilidad) *(cuando el tablero combine vistas)*
+
+![Tablero de Indicadores de Riesgo](/images/screens/riesgos/indicadores-tablero.png)
+
+## Crear un indicador
+1. Ve a **Riesgos → Indicadores** y pulsa **Nuevo KPI**.
+2. Elige **Fuente** (Riesgos / Tratamientos / Controles-SoA).
+3. Define **Filtros** (organización, fechas, proceso/servicio, responsable, etiquetas).
+4. Selecciona **Métrica / Agregación** (conteo, % sobre total filtrado, promedio, tendencia).
+5. Elige **Visualización** (serie temporal, barras, pareto, tarjeta).
+6. (Opcional) Configura **Objetivo / Umbrales** y **Color de alerta**.
+7. **Guardar** y añade el KPI al **Tablero**.
+
+![Configurar KPI](/images/screens/riesgos/indicadores-kpi.png)
+
+## KPIs sugeridos (ejemplos)
+- **Distribución por nivel (inherente / residual)**: % de riesgos en Bajo/Moderado/Alto/Crítico.
+- **Riesgos con plan**: % de riesgos **En tratamiento** sobre el total **Alto+Crítico**.
+- **Vencidos**: % de **acciones** con fecha objetivo vencida.
+- **Tiempo de cierre**: días promedio desde *creación → cierre* de riesgos.
+- **Eficacia del tratamiento**: ΔPromedio (**P×I inherente** – **residual**).
+- **Cobertura de controles**: % de riesgos **Altos/Críticos** con **controles SoA vinculados**.
+- **Tendencia mensual**: nuevos riesgos vs. riesgos cerrados.
+- **Backlog por responsable**: riesgos abiertos por owner/área.
+
+:::tip
+No mezcles **inherente** con **residual** en un mismo KPI; crea dos y compáralos.
+:::
+
+## Leer el tablero
+- **Tarjetas**: valores actuales vs. objetivo.
+- **Series**: tendencia y estacionalidad.
+- **Gráficos de barras**: comparaciones por **estado**, **responsable** o **proceso**.
+- **Pareto**: concentra el 20% de causas con 80% del impacto.
+
+![Ejemplo de tablero con series y tarjetas](/images/screens/riesgos/indicadores-ejemplos.png)
+
+## Exportar y compartir
+- Usa **Exportar** para descargar datos agregados o la base filtrada (CSV/Excel).
+- Documenta en la descripción del KPI la **definición operacional** (qué incluye/excluye).
+
+## Buenas prácticas
+- Define **periodicidad** (semanal/mensual) y un **dueño del tablero**.
+- Alinea escalas de **P/I** con las usadas en **Matriz** y reportes.
+- Etiqueta riesgos por **proyecto** o **tema** para KPIs temáticos.
+- Revisa **coherencia**: si sube el residual pero hay muchas “acciones hechas”, valida evidencias.
+
+## Solución de problemas
+**El KPI sale en 0** → Revisa **organización activa**, **rango de fechas** y **filtros**.  
+**No veo residual** → Asegúrate de que los riesgos tengan **P/I residuales** guardados.  
+**Doble conteo** → Evita agregar “por activo” y “por riesgo” a la vez si el tablero no deduplica.
+
+## Relacionado
+- [Registrar un riesgo](/modulos/riesgos/registrar/)
+- [Tratamiento y residual](/modulos/riesgos/tratamiento/)
+- [Matriz P×I y mapa de calor](/modulos/riesgos/matriz/)

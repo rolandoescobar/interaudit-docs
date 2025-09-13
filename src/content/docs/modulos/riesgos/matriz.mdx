@@ -1,0 +1,61 @@
+---
+title: Riesgos · Matriz P×I y mapa de calor
+description: Cómo interpretar la matriz P×I, filtrar por contexto, profundizar al detalle y exportar resultados.
+---
+
+La **matriz P×I** muestra la distribución de riesgos según **Probabilidad (P)** e **Impacto (I)**.  
+Puedes alternar entre **Inherente** y **Residual**, aplicar **filtros**, entrar al **detalle** y **exportar**.
+
+![Matriz P×I (overview)](/images/screens/riesgos/matriz-overview.png)
+
+## Cómo leer la matriz
+- Ejes **P (1–5)** y **I (1–5)** → cada celda es un nivel **P×I**.
+- El **color** refleja severidad (Bajo → Crítico) según tu política.
+- El **número** en cada celda es la **cantidad de riesgos** allí.
+- Haz clic en una **celda** para ver el **listado** de riesgos que contiene.
+
+:::note
+Los umbrales (Bajo/Moderado/Alto/Crítico) se basan en tu política; si cambian, actualiza también reportes e indicadores.
+:::
+
+## Filtros más usados
+![Filtros de matriz](/images/screens/riesgos/matriz-filtros.png)
+
+- **Tipo de valoración**: *Inherente* / *Residual*.  
+- **Estado**: *Borrador, Evaluado, En tratamiento, Cerrado*.  
+- **Proceso/Servicio**, **Activo**, **Responsable**, **Etiqueta**.  
+- **Rango temporal** (creación/actualización).  
+- **Organización activa** (selector superior).
+
+:::tip
+Para revisar eficacia del tratamiento, compara la vista **Inherente** vs **Residual** con los mismos filtros.
+:::
+
+## Profundizar (drilldown)
+1. Haz clic en una **celda** (p. ej., **P=4, I=5**).  
+2. Se abre el **listado filtrado** de riesgos de esa celda.  
+3. Entra a un riesgo y revisa **controles**, **acciones** y **residual**.
+
+![Drilldown desde la celda](/images/screens/riesgos/matriz-drilldown.png)
+
+## Exportar
+- Usa **Exportar** para descargar el **listado** resultante (CSV/Excel) — respeta los **filtros** aplicados.
+- Incluye columnas: proceso/servicio, activos, P, I, P×I, estado, responsable y etiquetas.
+
+## Reglas y criterios (ejemplo)
+- **Bajo**: 1–5  
+- **Moderado**: 6–10  
+- **Alto**: 11–15  
+- **Crítico**: 16–25  
+
+Adecúa estos rangos a tu **apetito de riesgo**.  
+Si manejas escalas *Baja/Media/Alta*, documenta la equivalencia.
+
+## Buenas prácticas
+- Revisa semanalmente celdas **Altas/Críticas** y valida **planes de tratamiento**.  
+- Evita duplicados: consolida riesgos similares del mismo proceso/servicio.  
+- Mantén **justificación** de cambios P/I para auditoría.
+
+## Relacionado
+- [Registrar un riesgo](/modulos/riesgos/registrar/)  
+- [Tratamiento y residual](/modulos/riesgos/tratamiento/)

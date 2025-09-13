@@ -1,0 +1,140 @@
+---
+title: Riesgos · Registrar un riesgo
+description: Cómo crear, evaluar, tratar y cerrar un riesgo (P×I), vinculando activos, controles y plan de tratamiento.
+---
+
+Registrar un riesgo en InterAudit sigue el ciclo: **Identificar → Evaluar (P×I) → Tratar → Residual → Cerrar**.  
+Este flujo se nutre de **Procesos/Servicios**, **Activos** y **Controles/SoA** definidos previamente.
+
+![Listado de riesgos con filtros](/images/screens/riesgos/lista.png)
+
+## Antes de empezar
+- Rol recomendado: **Gestor de Seguridad** (o Admin).
+- Tener creados: **Procesos/Servicios** y **Activos** (Organización) y, si es posible, **Controles/SoA** (Normativa).
+- Alinear la **escala** de Probabilidad e Impacto (ver abajo).
+
+## Escalas de valoración (ejemplo)
+- **Probabilidad (P)**: 1 Muy baja · 2 Baja · 3 Media · 4 Alta · 5 Muy alta  
+- **Impacto (I)**: 1 Insignificante · 2 Menor · 3 Moderado · 4 Mayor · 5 Crítico  
+- **Riesgo inherente** = **P × I** (1–25).  
+  - 1–5 **Bajo**, 6–10 **Moderado**, 11–15 **Alto**, 16–25 **Crítico** *(ajusta a tu política)*.
+
+:::note
+Si tu organización usa otra escala (por ejemplo **Baja/Media/Alta**), homologue los niveles para reportes e **Indicadores**.
+:::
+
+---
+
+## Flujo paso a paso
+
+### 1) Crear el riesgo
+1. Ve a **Riesgos → Nuevo**.
+2. Completa **Identificación**:
+   - **Título/Resumen** del escenario.
+   - **Proceso/Servicio** afectado.
+   - **Activo(s)** relacionados *(opcional pero recomendado)*.
+   - **Responsable**, **Fecha**, **Etiquetas**.
+3. **Guardar** como **Borrador**.
+
+![Formulario nuevo riesgo](/images/screens/riesgos/nuevo-form.png)
+![Seleccionar proceso/servicio](/images/screens/riesgos/seleccionar-proceso.png)
+![Agregar activos relacionados](/images/screens/riesgos/agregar-activos.png)
+
+### 2) Describir el escenario
+- **Causa/amenaza** y **vulnerabilidad** (si tu metodología lo usa).
+- **Consecuencia** esperada sobre **C**, **I** o **D** del activo/servicio.
+- **Controles existentes** (si ya hay implementados).
+
+### 3) Valorar Probabilidad e Impacto
+1. Abre la sección **Evaluación**.
+2. Selecciona **P** y **I** según tu escala.
+3. El sistema calcula **P×I** (inherente) y ubica el resultado en la **matriz**.
+
+![Valorar P e I](/images/screens/riesgos/valorar-pi.png)
+![Matriz P×I](/images/screens/riesgos/matriz.png)
+
+:::tip
+Usa evidencias: incidentes previos, resultados de auditorías, métricas de continuidad, etc.
+:::
+
+### 4) Vincular controles (SoA)
+1. En **Controles asociados**, pulsa **Añadir**.
+2. Busca por norma/código (ej.: *A.5.1*).
+3. Selecciona el control y, si aplica, enlaza **evidencias**.
+
+![Vincular controles al riesgo](/images/screens/riesgos/vincular-controles.png)
+
+### 5) Definir tratamiento
+1. En **Tratamiento** elige una estrategia:
+   - **Evitar**, **Reducir**, **Compartir** (transferir), **Aceptar**.
+2. Si **Reducir/Compartir**:
+   - Crea **acciones** o un **proyecto** (enlaza a *Proyectos* o *NC & Acciones*).
+   - Asigna **responsables**, **fechas**, **evidencias**.
+
+![Plan de tratamiento](/images/screens/riesgos/plan-tratamiento.png)
+
+### 6) Estimar riesgo **residual**
+1. Considera el efecto del tratamiento/controles (revisión realista).
+2. Ajusta **P** y **I (residual)**.
+3. Guarda el estado como **Evaluado** o **En tratamiento**.
+
+![Riesgo residual](/images/screens/riesgos/residual.png)
+
+### 7) Cerrar y hacer seguimiento
+- Cambia estado a **Cerrado** cuando el tratamiento esté terminado y validado.
+- Adjunta **evidencias** finales y **comentarios** de revisión.
+
+![Adjuntar evidencias](/images/screens/riesgos/evidencia.png)
+
+---
+
+## Campos principales (referencia rápida)
+- **Identificación**: título, proceso/servicio, activos, responsable, etiquetas.
+- **Escenario**: amenaza, vulnerabilidad, consecuencia.
+- **Evaluación**: P, I, cálculo P×I, **matriz**.
+- **Controles**: lista vinculada a SoA y evidencias.
+- **Tratamiento**: estrategia, acciones/proyecto, fechas, responsables.
+- **Residual**: P, I residuales + justificación.
+- **Adjuntos/Notas**: soporte de decisión y auditoría.
+
+## Filtros útiles en el listado
+- **Estado** (Borrador/Evaluado/En tratamiento/Cerrado).
+- **Nivel de riesgo** (Bajo–Crítico).
+- **Proceso/Servicio** y **Activo**.
+- **Responsable** y **Etiqueta**.
+
+![Filtros del listado de riesgos](/images/screens/riesgos/filtros.png)
+
+---
+
+## Buenas prácticas
+- Documenta **justificaciones** de P e I (inherente y residual).
+- Revisa **riesgos duplicados** por proceso/servicio para consolidar.
+- Vuelve **medibles** los tratamientos (KPI en **Indicadores**).
+- Revalúa después de **cambios** en procesos, activos o controles.
+
+## Solución de problemas
+**No encuentro un proceso/servicio** → Revísalo en *Organización · Procesos y servicios* y la **organización activa**.  
+**No puedo vincular controles** → Carga/valida la **SoA** en *Normativa → Controles & SoA*.  
+**El nivel no cambia tras tratar** → Recuerda ajustar **P/I residuales** y **guardar**.
+
+---
+
+## Capturas sugeridas (guárdalas así)
+Coloca imágenes en `public/images/screens/riesgos/`:
+
+- `lista.png` *(listado con filtros)*  
+- `nuevo-form.png` *(formulario nuevo)*  
+- `seleccionar-proceso.png` *(selector de proceso/servicio)*  
+- `agregar-activos.png` *(relación de activos)*  
+- `valorar-pi.png` *(probabilidad e impacto)*  
+- `matriz.png` *(mapa de calor)*  
+- `vincular-controles.png` *(controles/SoA)*  
+- `plan-tratamiento.png` *(acciones/proyecto)*  
+- `residual.png` *(valor residual)*  
+- `evidencia.png` *(adjuntos/soporte)*  
+- `filtros.png` *(filtros del listado)*
+
+Uso en el texto:
+```md
+![Matriz P×I](/images/screens/riesgos/matriz.png)
