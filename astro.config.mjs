@@ -37,4 +37,5 @@ export default defineConfig({
       ],
     }),
   ],
+   redirects: { '/': '/inicio/' },
 });
