@@ -8,13 +8,12 @@ export default defineConfig({
     starlight({
       title: 'InterAudit · Manual de Usuario',
       locales: { root: { label: 'Español', lang: 'es' } },
-      //logo: { src: '/logo.svg', alt: 'InterAudit' },
+      logo: { src: '/logo.svg', alt: 'InterAudit' },
       favicon: '/favicon.svg',
 
-      // ✅ Formato correcto: array de items (usa `href`)
+      // Social actualizado al nuevo formato
       social: [
-        { icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' },
-        // { icon: 'x', label: 'X', href: 'https://x.com/tu_cuenta' },
+        { icon: 'github', label: 'GitHub', href: 'https://github.com/rolandoescobar/interaudit-docs' },
       ],
 
       sidebar: [
