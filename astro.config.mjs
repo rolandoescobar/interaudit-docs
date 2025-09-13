@@ -8,7 +8,7 @@ export default defineConfig({
     starlight({
       title: 'InterAudit · Manual de Usuario',
       locales: { root: { label: 'Español', lang: 'es' } },
-      logo: { src: '/logo.svg', alt: 'InterAudit' },
+      //logo: { src: '/logo.svg', alt: 'InterAudit' },
       favicon: '/favicon.svg',
 
       // Social actualizado al nuevo formato
