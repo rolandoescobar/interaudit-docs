@@ -1,0 +1,107 @@
+---
+title: "Riesgos · BIA (ISO 22317)"
+description: "Cómo ejecutar un Análisis de Impacto al Negocio: valorar impactos por tiempo, definir MTPD/MAO, RTO/RPO y priorizar recuperaciones."
+---
+
+El **BIA (Business Impact Analysis)** identifica cómo afecta una interrupción a procesos/servicios y define parámetros clave para continuidad:
+**MTPD/MAO**, **RTO**, **RPO**, **MBCO** y **prioridades**. Esta guía está alineada con **ISO 22317** y se integra con procesos, activos y controles de InterAudit.
+
+![Vista general del BIA](/images/screens/riesgos/bia/overview.png)
+
+## Antes de empezar
+- Rol recomendado: **Gestor de Seguridad** / **Continuidad**.
+- Debes tener definidos **Procesos/Servicios**, **Unidades** y **Activos**.
+- Acordar **escala de impacto** (1–5 o Baja/Media/Alta) y **horizontes de tiempo**.
+
+### Parámetros sugeridos
+- **Horizontes de tiempo**: 1h · 4h · 8h · 24h · 72h · 7d  
+- **Categorías de impacto**: Financiero · Legal/Regulatorio · Reputacional · Operativo/Servicio · Seguridad de la Información (C/I/D)  
+- **Umbrales de severidad** (ejemplo):  
+  - 1–5 **Bajo** | 6–10 **Moderado** | 11–15 **Alto** | 16–25 **Crítico**
+
+---
+
+## 1) Crear un BIA
+1. Ve a **Riesgos → BIA** y pulsa **Nuevo BIA**.
+2. Selecciona **Ámbito**: Organización/Unidad y **Proceso o Servicio**.
+3. Define (si aplica) **Periodo de análisis** y **moneda**.
+4. **Guardar** para habilitar las pestañas de valoración.
+
+![Nuevo BIA](/images/screens/riesgos/bia/nuevo.png)
+
+---
+
+## 2) Valorar impactos por horizonte de tiempo
+1. Abre **Valoración** y, por cada **categoría de impacto**, indica la severidad para cada **horizonte** (1h, 4h, 8h, 24h, 72h, 7d).
+2. El sistema calcula un **perfil de impacto** y sugiere severidad agregada.
+
+![Valoración de impactos por tiempo](/images/screens/riesgos/bia/valoracion-tiempo.png)
+
+:::tip
+Si usas escala **Baja/Media/Alta**, define equivalencias a 1–5 para mantener consistencia con indicadores.
+:::
+
+---
+
+## 3) Definir MTPD/MAO y MBCO
+- **MTPD/MAO** (Maximum Tolerable Period of Disruption): tiempo máximo tolerable de interrupción antes de un impacto inaceptable.  
+- **MBCO** (Minimum Business Continuity Objective): nivel mínimo de servicio aceptable durante la contingencia.
+
+1. Revisa el **perfil de impacto** y propone **MTPD**.  
+2. Define **MBCO** (por ejemplo, “operar al 40% con servicios degradados”).  
+3. El sistema sugiere un **RTO objetivo** coherente con MTPD/MBCO.
+
+![Definir MTPD y MBCO](/images/screens/riesgos/bia/mtpd-mbco.png)
+
+---
+
+## 4) Fijar RTO y RPO propuestos
+- **RTO** (Recovery Time Objective): tiempo para recuperar **función**.
+- **RPO** (Recovery Point Objective): tolerancia a pérdida de **datos**.
+
+1. Ajusta **RTO/RPO** en función de dependencias tecnológicas y operativas.  
+2. Registra **justificación** (ej.: “RPO 4h por replicación horaria”).
+
+![RTO y RPO](/images/screens/riesgos/bia/rto-rpo.png)
+
+---
+
+## 5) Dependencias y recursos
+1. Declara **Activos** críticos (datos, apps, infraestructura).  
+2. Añade **Proveedores/terceros** y **Ubicaciones**.  
+3. Indica **Personal crítico** y **turnos** necesarios.
+
+![Dependencias y recursos](/images/screens/riesgos/bia/dependencias.png)
+
+:::note
+Estas relaciones aceleran planes de **DR/BCP** y facilitan auditorías.
+:::
+
+---
+
+## 6) Estrategias de continuidad/recuperación
+Selecciona una o más y documenta **tiempos de alistamiento**:
+- **Workaround manual** temporal  
+- **Sitio alterno** / **Trabajo remoto**  
+- **Activos redundantes** / **Failover** / **Alta disponibilidad**  
+- **Backups** y **restauración** (on-prem/cloud)  
+- **Acuerdos con proveedores** (SLA/OLA)
+
+![Estrategias](/images/screens/riesgos/bia/estrategias.png)
+
+---
+
+## 7) Priorización y resultados
+El sistema genera:
+- **Ranking** de procesos/servicios por **criticidad** y **MTPD**.  
+- **RTO/RPO finales** y **MBCO** por proceso/servicio.  
+- **Brechas** (p.ej., RTO requerido < capacidades actuales).  
+- Exportación a **CSV/Excel** para planes y comités.
+
+![Resultados y ranking](/images/screens/riesgos/bia/resultados.png)
+
+---
+
+## Exportar / Importar
+- **Exportar**: listado consolidado con MTPD, RTO, RPO, MBCO y dependencias.
+- **Importar** (plantilla mínima CSV):
