@@ -26,9 +26,9 @@ export default defineConfig({
           label: 'Normativa',
           items: [
             { label: 'Normativa · Visión general', link: '/modulos/normativa/' },
-            { label: 'Requisitos', link: '/modulos/normativa/requisitos' },
-            { label: 'Controles & SoA', link: '/modulos/normativa/controles-soa' },
-            { label: 'Mapeos y aplicabilidad', link: '/modulos/normativa/mapeos' },
+            { label: 'Requisitos', link: '/modulos/normativa/requisitos/' },
+            { label: 'Controles & SoA', link: '/modulos/normativa/controles-soa/' },
+            { label: 'Mapeos y aplicabilidad', link: '/modulos/normativa/mapeos/' },
           ],
         },
         {
@@ -36,7 +36,7 @@ export default defineConfig({
           items: [
             { label: 'Estructura (org/unidades)', link: '/modulos/organizacion/estructura' },
             { label: 'Procesos y servicios', link: '/modulos/organizacion/procesos-servicios' },
-            { label: 'Usuarios y roles', link: '/modulos/organizacion/roles' },
+            //{ label: 'Usuarios y roles', link: '/modulos/organizacion/roles' },
             { label: 'Activos de información', link: '/modulos/organizacion/activos' },
           ],
         },

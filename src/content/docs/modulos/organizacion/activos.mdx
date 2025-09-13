@@ -1,0 +1,63 @@
+---
+title: Organización · Activos de información
+description: Cómo crear y mantener el inventario de activos, clasificarlos (C-I-D), relacionarlos con procesos/servicios y usarlos en riesgos.
+---
+
+Un **activo de información** es todo recurso que soporta los procesos de la organización: **datos**, **aplicaciones**, **infraestructura**, **personas** o **proveedores**.  
+Mantener el inventario actualizado permite **evaluar riesgos**, **priorizar controles/SoA** y **alimentar indicadores**.
+
+![Listado de activos con filtros y acciones](/images/screens/organizacion/activos/lista.png)
+
+## Antes de empezar
+- Rol recomendado: **Gestor** o **Administrador**.
+- Ten a mano: **propietario**, **unidad/área**, **proceso/servicio** relacionado y **clasificación C-I-D**.
+
+## Campos habituales del activo
+- **Nombre** y **Tipo** (Información, Aplicación, Infraestructura, Otro).
+- **Unidad/Área** y **Propietario** (responsable).
+- **Proceso/Servicio** relacionado.
+- **Descripción** y **Ubicación** (física/lógica/URL).
+- **Clasificación C-I-D** (Confidencialidad, Integridad, Disponibilidad) y **criticidad**.
+- **Etiquetas** (p. ej., `core`, `externo`, `proveedor`), **Documentación/Evidencias** (enlaces o adjuntos).
+
+:::tip
+Si ya definiste **Procesos y servicios**, relaciónalos aquí: te ahorrará tiempo al registrar **Riesgos**.
+:::
+
+---
+
+## Crear un activo
+1. Ve a **Organización → Activos** y pulsa **Nuevo**.
+2. Completa **Identificación** (Nombre, Tipo, Unidad/Área, Propietario).
+3. Relaciona el **Proceso/Servicio** que utiliza o soporta.
+4. Define **Clasificación C-I-D** (escala 1–5 o Baja/Media/Alta según tu política).
+5. Agrega **Evidencias** (URL/archivo) y **Etiquetas**.
+6. **Guardar**.
+
+![Formulario: nuevo activo](/images/screens/organizacion/activos/nuevo.png)
+
+### Ejemplo de clasificación
+- **Confidencialidad**: Alta (datos personales)
+- **Integridad**: Media
+- **Disponibilidad**: Alta (servicio 24/7)
+
+![Clasificación C-I-D del activo](/images/screens/organizacion/activos/clasificacion.png)
+
+---
+
+## Editar, desactivar o eliminar
+- **Editar**: cambia propietario, clasificación o relaciones.
+- **Desactivar**: oculta del uso diario manteniendo historial.
+- **Eliminar**: solo si no tiene **riesgos**, **evidencias** ni **relaciones** vigentes.
+
+:::caution
+Si el botón **Eliminar** no aparece, revisa **riesgos asociados** o **relaciones** con procesos/servicios.
+:::
+
+---
+
+## Importar / Exportar
+- **Exportar**: descarga el listado con los filtros actuales.
+- **Importar CSV/Excel**: ideal para carga inicial.
+
+**Plantilla mínima (CSV):**

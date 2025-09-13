@@ -1,0 +1,67 @@
+---
+title: Organización · Procesos y servicios
+description: Cómo registrar procesos y servicios, vincularlos a unidades, activos y usarlos en riesgos/BIA.
+---
+
+Los **procesos** describen cómo opera la organización; los **servicios** son lo que esos procesos entregan a clientes internos o externos.  
+Definirlos bien permite **evaluar riesgos**, **priorizar continuidad (BIA)** y **mapear controles**.
+
+![Listado de procesos y servicios de la organización](/images/screens/organizacion/procesos/lista.png)
+
+## Antes de empezar
+- Rol recomendado: **Administrador** o **Gestor** con permisos de Organización.
+- Debes tener configuradas las **Unidades/Áreas** (ver *Organización · Estructura*).
+
+## Campos habituales
+- **Nombre** y **Tipo** (*Proceso* / *Servicio*).
+- **Unidad/Área**, **Propietario** (responsable) y **Suplente**.
+- **Objetivo/Descripción**, **Clientes** (interno/externo).
+- **Criticidad** (Alta/Media/Baja), **RTO** y (opcional) **RPO**.
+- **Dependencias** (otros procesos/servicios, proveedores, TI).
+- **Documentación** (URLs/archivos), **Etiquetas**.
+
+:::tip
+Define una convención simple: *Área – Proceso – Servicio*. Ej.: **Operaciones – Gestión de Pedidos – Portal de Clientes**.
+:::
+
+---
+
+## Crear un **Proceso**
+1. Ve a **Organización → Procesos y servicios** y pulsa **Nuevo**.
+2. Selecciona **Tipo = Proceso** y completa los campos (arriba).
+3. Asigna **Unidad** y **Propietario**.
+4. (Opcional) Declara **RTO** y **Dependencias**.
+5. **Guardar**.
+
+![Nuevo proceso](/images/screens/organizacion/procesos/nuevo-proceso.png)
+
+## Crear un **Servicio**
+1. En la misma vista, pulsa **Nuevo**.
+2. Selecciona **Tipo = Servicio**.
+3. Indica **Clientes** (interno/externo) y **SLA** si aplica.
+4. Relaciona con el **Proceso** que lo soporta.
+5. **Guardar**.
+
+![Nuevo servicio](/images/screens/organizacion/procesos/nuevo-servicio.png)
+
+## Vincular **Activos** al Proceso/Servicio
+1. Abre el **detalle** del proceso o servicio.
+2. En la sección **Activos relacionados**, pulsa **Añadir**.
+3. Selecciona los activos (información, aplicaciones, infraestructura).
+4. **Guardar**.
+
+:::note
+Esta relación acelera el registro de **riesgos** (el buscador propondrá activos del proceso/servicio).
+:::
+
+## Usar en **Riesgos** y **BIA**
+- En **Riesgos → Nuevo**, elige el **Proceso/Servicio** y se traerán **activos** y **controles** sugeridos.
+- En **BIA**, los **RTO/RPO** declarados aquí precargan el análisis y priorización.
+
+---
+
+## Importar / Exportar
+- **Importar**: desde **Acciones → Importar CSV/Excel** (usa la plantilla del sistema).
+- **Exportar**: descarga el listado actual con filtros aplicados.
+
+**Plantilla mínima (CSV):**

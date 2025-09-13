@@ -1,0 +1,99 @@
+---
+title: Organización · Estructura
+description: Cómo definir la jerarquía de la organización (unidades/áreas, sedes) y cambiar el contexto activo.
+---
+
+La **Estructura** define la **jerarquía** con la que trabajarás en InterAudit:  
+**Organización → Unidades/Áreas → (opcional) Sedes/Ubicaciones → Procesos/Servicios**.  
+Esto impacta en la visibilidad de **activos, riesgos, controles/SoA, tickets y reportes**.
+
+![Árbol de estructura organizacional](/images/screens/organizacion/estructura-arbol.png)
+
+## Antes de empezar
+- Rol recomendado: **Administrador** (o Gestor con permisos de Organización).
+- Ten a mano: nombre legal, identificadores (opcional), responsables y emails de contacto.
+
+## Cambiar la **organización activa**
+1. Abre el **selector de organización** en la barra superior.
+2. Elige la organización con la que quieres operar.  
+   Todas las vistas y conteos se filtrarán a ese contexto.
+
+![Selector de organización activa](/images/screens/organizacion/selector-organizacion.png)
+
+:::note
+Si “no ves datos”, casi siempre es porque estás en la **organización equivocada** o te faltan **permisos**.
+:::
+
+## Crear una **Organización**
+1. Ve a **Organización → Estructura** y pulsa **Nueva organización**.
+2. Completa:
+   - **Nombre** y (opcional) **Código/ID legal**.
+   - **Descripción** y **Responsable**.
+   - (Opcional) **Dominio/URL** y **datos de contacto**.
+3. **Guardar**.
+
+![Formulario: nueva organización](/images/screens/organizacion/organizacion-nueva.png)
+
+## Crear **Unidades/Áreas**
+1. En **Estructura**, selecciona la **organización** y el botón **Añadir unidad/área**.
+2. Define:
+   - **Nombre** (ej.: TI, Operaciones, Finanzas).
+   - **Responsable** y **correo**.
+   - (Opcional) **Sede/Ubicación** y **Descripción**.
+3. Elige si depende de otra unidad (**padre**) para construir el **árbol**.
+4. **Guardar**.
+
+![Formulario: nueva unidad/área](/images/screens/organizacion/unidad-nueva.png)
+
+## Editar, mover o desactivar
+- **Editar**: cambia nombre, responsable o metadatos.
+- **Mover**: reubica una unidad bajo otro **padre** (mantiene hijos).
+- **Desactivar**: oculta del uso diario sin borrar datos históricos.
+
+:::caution
+**Eliminar** sólo es posible si **no** existen dependencias (hijos, procesos/servicios, activos o usuarios asociados). Revisa primero esos vínculos.
+:::
+
+## Relacionar con **Procesos/Servicios**
+- Desde **Organización → Procesos y servicios** asigna cada proceso a su **unidad**.
+- Esta relación mejora el análisis de **riesgo** y los **mapeos** con controles.
+
+
+  - (Opcional) **Ámbito** por unidad (acceso limitado a su área).
+-->## Asociar **Usuarios y Roles**
+<!--
+- Ve a **Organización → Usuarios y roles** para asignar:
+  - **Rol global** (Administrador, Gestor, Auditor, Colaborador).
+
+## Checklist inicial (nuevo cliente/entidad)
+1. Crear **Organización**.
+2. Cargar **Unidades/Áreas** principales.
+3. Crear **Usuarios y Roles**.
+4. Registrar **Procesos/Servicios** por unidad.
+5. Cargar **Activos** y validar **responsables**.
+6. Verificar que el selector muestre la **organización correcta**.
+
+## Solución de problemas
+**No puedo borrar una unidad**  
+Tiene dependencias. Revisa procesos, activos, hijos o usuarios asociados.
+
+**No veo datos en módulos**  
+Cambia la **organización activa** o solicita **permisos**.
+
+**Reportes con cifras raras**  
+Confirma que los **procesos/servicios** estén asignados a la unidad correcta.
+
+---
+
+## Capturas sugeridas (guárdalas aquí)
+Guarda en `public/images/screens/organizacion/`:
+
+- `estructura-arbol.png` *(árbol completo)*
+- `selector-organizacion.png` *(cambio de organización activa)*
+- `organizacion-nueva.png` *(formulario alta de organización)*
+- `unidad-nueva.png` *(formulario alta de unidad/área)*
+
+Ejemplo en el texto:
+```md
+![Nueva unidad bajo Operaciones](/images/screens/organizacion/unidad-nueva.png)
+```
