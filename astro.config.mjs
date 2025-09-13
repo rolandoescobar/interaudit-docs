@@ -8,31 +8,72 @@ export default defineConfig({
     starlight({
       title: 'InterAudit · Manual de Usuario',
       locales: { root: { label: 'Español', lang: 'es' } },
-      //logo: { src: '/logo.svg', alt: 'InterAudit' },
-      favicon: '/favicon.svg',
-
-      // Social actualizado al nuevo formato
-      social: [
-        { icon: 'github', label: 'GitHub', href: 'https://github.com/rolandoescobar/interaudit-docs' },
-      ],
+      // logo / favicon los dejamos para después
+      social: [],
 
       sidebar: [
         { label: 'Inicio', link: '/inicio/' },
         { label: 'Primeros pasos', link: '/primeros-pasos/' },
+
         {
-          label: 'Tareas paso a paso',
+          label: 'Escritorio',
           items: [
-            { label: 'Cargar activos', link: '/tareas/activos/' },
-            { label: 'Registrar un riesgo', link: '/tareas/riesgos/registrar/' },
-            { label: 'Tratamiento y residual', link: '/tareas/riesgos/tratamiento/' },
-            { label: 'Controles y SoA', link: '/tareas/controles-soa/' },
-            { label: 'No conformidades y acciones', link: '/tareas/nc-acciones/' },
-            { label: 'BIA', link: '/tareas/bia/' },
-            { label: 'Indicadores', link: '/tareas/indicadores/' },
-            { label: 'Importar/Exportar', link: '/tareas/import-export/' },
+            { label: 'Visión general', link: '/modulos/escritorio/' },
+            { label: 'Widgets e indicadores', link: '/modulos/escritorio/widgets' },
           ],
         },
-        { label: 'FAQ & Soporte', link: '/soporte/' },
+        {
+          label: 'Normativa',
+          items: [
+            { label: 'Visión general', link: '/modulos/normativa/' },
+            { label: 'Requisitos', link: '/modulos/normativa/requisitos' },
+            { label: 'Controles & SoA', link: '/modulos/normativa/controles-soa' },
+            { label: 'Mapeos y aplicabilidad', link: '/modulos/normativa/mapeos' },
+          ],
+        },
+        {
+          label: 'Organización',
+          items: [
+            { label: 'Estructura (org/unidades)', link: '/modulos/organizacion/estructura' },
+            { label: 'Procesos y servicios', link: '/modulos/organizacion/procesos-servicios' },
+            { label: 'Usuarios y roles', link: '/modulos/organizacion/roles' },
+            { label: 'Activos de información', link: '/modulos/organizacion/activos' },
+          ],
+        },
+        {
+          label: 'Riesgos',
+          items: [
+            { label: 'Registrar un riesgo', link: '/modulos/riesgos/registrar/' },
+            { label: 'Tratamiento y residual', link: '/modulos/riesgos/tratamiento/' },
+            { label: 'Matriz P×I y mapa de calor', link: '/modulos/riesgos/matriz' },
+            { label: 'Indicadores (ISO 27004)', link: '/modulos/riesgos/indicadores' },
+            { label: 'BIA (ISO 22317)', link: '/modulos/riesgos/bia' },
+          ],
+        },
+        {
+          label: 'Proyectos',
+          items: [
+            { label: 'Crear proyecto', link: '/modulos/proyectos/crear' },
+            { label: 'Plan, hitos y tareas', link: '/modulos/proyectos/plan' },
+            { label: 'No conformidades y acciones', link: '/modulos/proyectos/nc-acciones' },
+          ],
+        },
+        {
+          label: 'Soporte',
+          items: [
+            { label: 'Tickets y ayuda', link: '/modulos/soporte/tickets' },
+            { label: 'FAQ', link: '/soporte/' },
+          ],
+        },
+        {
+          label: 'Administración',
+          items: [
+            { label: 'Parámetros del sistema', link: '/modulos/administracion/parametros' },
+            { label: 'Importar / Exportar', link: '/modulos/administracion/import-export' },
+            { label: 'Auditoría y bitácora', link: '/modulos/administracion/auditoria' },
+          ],
+        },
+
         { label: 'Novedades', link: '/changelog/' },
       ],
     }),
