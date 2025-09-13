@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="40" viewBox="0 0 200 40" fill="none">
+  <title>InterAudit</title>
+  <!-- Escudo -->
+  <path d="M20 5 L34 9 V20c0 9-6.5 13-14 17C12 33 6 29 6 20V9z"
+        stroke="currentColor" stroke-width="2" fill="none"/>
+  <!-- Iniciales dentro del escudo -->
+  <text x="13.5" y="22" font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif"
+        font-size="10" font-weight="700" fill="currentColor">IA</text>
+
+  <!-- Texto de marca -->
+  <text x="48" y="26"
+        font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif"
+        font-size="20" font-weight="700" fill="currentColor">InterAudit</text>
+</svg>
