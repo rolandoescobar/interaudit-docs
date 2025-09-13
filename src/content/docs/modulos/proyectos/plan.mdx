@@ -1,0 +1,107 @@
+---
+title: "Proyectos · Plan e hitos"
+description: "Planificar y hacer seguimiento del proyecto: hitos, tareas, responsables, evidencias y vínculo con riesgos/acciones."
+---
+
+Los **Proyectos** agrupan el trabajo de mejora (implementación SGSI, auditorías, planes de tratamiento).  
+En **Plan** gestionarás **hitos**, **tareas**, responsables, fechas y evidencias, y podrás **vincular riesgos/NC** para trazabilidad.
+
+![Listado de proyectos](/images/screens/proyectos/lista.png)
+
+## Antes de empezar
+- Rol recomendado: **Líder de proyecto** o **Administrador**.
+- Debes tener creado un proyecto (ver **[Proyectos · Crear](/modulos/proyectos/crear/)**).
+
+---
+
+## Abrir el plan del proyecto
+1. Ve a **Proyectos → Plan**.  
+2. En el listado, pulsa **Ver** sobre el proyecto.  
+3. Accede a las pestañas **Hitos**, **Tareas**, **Riesgos**, **Acciones** y **Documentos**.
+
+![Detalle del proyecto](/images/screens/proyectos/detalle.png)
+
+---
+
+## Hitos
+Los **hitos** marcan fechas clave (aprobaciones, auditorías, go-live).
+
+1. Pestaña **Hitos** → **Añadir hito**.  
+2. Completa **Nombre** y **Fecha objetivo** (y, si aplica, responsable).  
+3. **Guardar**. Puedes **editar** o **reordenar** si tu instancia lo permite.
+
+![Hitos del proyecto](/images/screens/proyectos/hitos.png)
+
+:::tip
+Usa nombres accionables: *“SoA aprobada por Comité”*, *“Auditoría interna finalizada”*.
+:::
+
+---
+
+## Tareas
+Desglosan el trabajo en unidades ejecutables con responsables y evidencias.
+
+1. Pestaña **Tareas** → **Nueva tarea**.  
+2. Campos habituales:
+   - **Título** y **Descripción** (resultado esperado).
+   - **Responsable** y **Fecha objetivo**.
+   - **Estado** (*Pendiente · En curso · Hecha · Bloqueada*).
+   - **Etiqueta** (p. ej., `sgsi`, `auditoria`, `control-A.8`, `riesgo-123`).
+   - **Evidencia** (URL/archivo).
+3. **Guardar**.
+
+![Tareas](/images/screens/proyectos/tareas.png)
+
+**Acciones masivas**  
+- **Exportar** tareas filtradas a CSV/Excel.  
+- **Importar** desde plantilla (si está habilitado).
+
+:::note
+No marques **Hecha** sin **evidencia**. Deja un comentario breve de cierre.
+:::
+
+---
+
+## Vincular **riesgos** y **acciones/NC**
+- Desde **Riesgos → Tratamiento**, enlaza el riesgo al **Proyecto** (se verá en la pestaña **Riesgos**).  
+- Desde **Proyectos → NC & Acciones**, registra hallazgos y acciones correctivas/preventivas y relaciónalas al proyecto.
+
+![Riesgos y acciones vinculadas](/images/screens/proyectos/seguimiento.png)
+
+**Beneficios**
+- Trazabilidad completa: Riesgo ↔ Plan ↔ Acción ↔ Evidencia.  
+- Indicadores más fiables (avance de tratamiento, vencidos, eficacia).
+
+---
+
+## Seguimiento y reportes
+- **Panel del proyecto**: % avance, tareas **vencidas**, tareas **bloqueadas**.  
+- **Filtros**: por **responsable**, **estado**, **etiqueta**.  
+- **Exportar**: plan e historial para comités.
+
+:::tip
+Agenda una **revisión semanal** del plan: repasa vencidos y bloqueos, y actualiza fechas realistas.
+:::
+
+---
+
+## Buenas prácticas
+- Un **dueño** claro por proyecto y revisión **semanal**.  
+- Describir **resultado esperado** en cada tarea (qué cambia después).  
+- Usar **etiquetas** coherentes para agrupar por control, riesgo o auditoría.  
+- Adjuntar **evidencia** antes de marcar *Hecha*.
+
+## Solución de problemas
+**No veo el proyecto** → Revisa la **organización activa** y tus **permisos**.  
+**No puedo asignar responsable** → El usuario debe existir en la organización.  
+**No aparecen riesgos** → Vincúlalos desde *Riesgos → Tratamiento* (misma organización).
+
+---
+
+## Imágenes sugeridas (pueden ser placeholders)
+Guarda en `public/images/screens/proyectos/`:
+- `lista.png` *(listado)*  
+- `detalle.png` *(vista del proyecto)*  
+- `hitos.png` *(pestaña de hitos)*  
+- `tareas.png` *(pestaña de tareas)*  
+- `seguimiento.png` *(panel/seguimiento)*

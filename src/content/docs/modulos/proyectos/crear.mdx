@@ -1,0 +1,67 @@
+---
+title: "Proyectos · Crear proyecto"
+description: "Cómo dar de alta un proyecto, completar campos clave, definir responsables y dejarlo listo para planificar hitos y tareas."
+---
+
+Los **Proyectos** agrupan iniciativas como implementación SGSI, auditorías, planes de tratamiento de riesgos o mejoras continuas.  
+Crear un proyecto habilita la planificación de **hitos**, **tareas** y la vinculación con **riesgos** y **acciones**.
+
+![Nuevo proyecto](/images/screens/proyectos/nuevo.png)
+
+## Antes de empezar
+- Rol recomendado: **Líder de proyecto** o **Administrador**.
+- Ten definidos: **Organización/Unidad**, usuarios responsables y (si aplica) riesgos que darán origen al proyecto.
+
+## Campos del proyecto
+- **Nombre** y **Objetivo** (qué problema resuelve o qué entrega).
+- **Organización** y **Unidad/Área**.
+- **Líder** (owner) y **Patrocinador** (opcional).
+- **Estado**: *Planeado · En curso · Pausado · Cerrado*.
+- **Fechas**: inicio y fin objetivo.
+- **Alcance** (límites y supuestos) y **Criterios de éxito**.
+- **Presupuesto** / **Recursos** (opcional).
+- **Etiquetas** (p. ej., `sgsi`, `auditoria`, `mejora`).
+- **Documentación** (URL/archivos: charter, cronograma, actas).
+
+:::tip
+Escribe el **objetivo** en formato resultado: *“Implantar controles A.5 y A.8 al 100% en 90 días con evidencias verificadas”*.
+:::
+
+## Crear el proyecto (paso a paso)
+1. Ve a **Proyectos → Plan** y pulsa **Nuevo**.
+2. Completa **Nombre**, **Objetivo**, **Organización/Unidad**.
+3. Asigna **Líder** y el **Estado inicial** (*Planeado*).
+4. Define **Fechas** objetivo y **Etiquetas**.
+5. Adjunta **documentos** clave (charter, WBS, cronograma).
+6. **Guardar**.
+
+![Detalle del proyecto tras crear](/images/screens/proyectos/detalle.png)
+
+## Después de crear: estructura y vínculos
+- **Hitos**: añade fechas clave (aprobación de SoA, auditoría interna, go-live).
+- **Tareas**: desglosa trabajo con **responsables**, **fechas** y **evidencias**.
+- **Riesgos**: desde *Riesgos → Tratamiento* vincula el riesgo al proyecto, o añádelos en la pestaña **Riesgos** del proyecto.
+- **NC & Acciones**: relaciona hallazgos y acciones correctivas al proyecto para trazabilidad.
+
+## Permisos y visibilidad
+- El proyecto se filtra por la **organización activa**.
+- Los **colaboradores** ven y actualizan tareas asignadas; solo **líder/administrador** cambian metadatos del proyecto.
+
+## Exportar / Importar (plan)
+- Exporta el plan (hitos/tareas) para comité.
+- Importar tareas via CSV (si tu instancia lo permite) usando columnas: `tarea, responsable, fecha, estado, evidencia, etiqueta`.
+
+## Buenas prácticas
+- Un **dueño claro** por proyecto; revisiones **semanales** del plan.
+- No marques tareas “Hechas” sin **evidencia**.
+- Mantén **etiquetas** consistentes para filtrar reportes.
+
+## Solución de problemas
+**No puedo seleccionar Unidad/Área** → Cárgala en *Organización · Estructura*.  
+**El responsable no aparece** → Verifica que el usuario exista en la organización.  
+**No veo el proyecto** → Cambia la **organización activa** en la barra superior.
+
+## Relacionado
+- [Proyectos · Plan e hitos](/modulos/proyectos/plan/)
+- [Proyectos · No conformidades y Acciones](/modulos/proyectos/nc-acciones/)
+- [Riesgos · Tratamiento y residual](/modulos/riesgos/tratamiento/)
