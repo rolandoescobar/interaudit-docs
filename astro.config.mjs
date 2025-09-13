@@ -18,14 +18,14 @@ export default defineConfig({
         {
           label: 'Escritorio',
           items: [
-            { label: 'Visión general', link: '/modulos/escritorio/' },
-            { label: 'Widgets e indicadores', link: '/modulos/escritorio/widgets' },
+            { label: 'Escritorio · Visión general', link: '/modulos/escritorio/' },
+            { label: 'Escritorio · Widgets e indicadores', link: '/modulos/escritorio/widgets/' },
           ],
         },
         {
           label: 'Normativa',
           items: [
-            { label: 'Visión general', link: '/modulos/normativa/' },
+            { label: 'Normativa · Visión general', link: '/modulos/normativa/' },
             { label: 'Requisitos', link: '/modulos/normativa/requisitos' },
             { label: 'Controles & SoA', link: '/modulos/normativa/controles-soa' },
             { label: 'Mapeos y aplicabilidad', link: '/modulos/normativa/mapeos' },

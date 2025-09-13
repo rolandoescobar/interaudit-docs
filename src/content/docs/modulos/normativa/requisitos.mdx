@@ -1,0 +1,41 @@
+---
+title: Requisitos
+description: Cómo consultar, filtrar, crear e importar requisitos por norma.
+---
+
+## Antes de empezar
+- Rol recomendado: **Gestor de Seguridad** o **Administrador**.
+- Debes tener al menos una **norma** registrada.
+
+## Consultar y filtrar
+1. Ve a **Normativa → Requisitos**.
+2. Usa filtros por **Norma**, **Capítulo/Cláusula**, **Certificable**, **Estado** y **Aplicabilidad**.
+3. Ordena por **código** o **prioridad** según tu criterio.
+
+![Listado de requisitos](/images/screens/normativa/requisitos-lista.png)
+
+## Crear/editar un requisito
+1. **Nuevo** requisito o **Editar** uno existente.
+2. Completa campos típicos:
+   - **Norma**, **Código** (ej.: *A.5.1*), **Título/Resumen**.
+   - **Detalle** (texto largo), **Capítulo/Cláusula**.
+   - **Certificable** (sí/no), **Prioridad** (opcional).
+   - **Aplicabilidad**: *Aplica / No aplica (justificación)*.
+   - **Estado**: *Pendiente, En curso, Completado*.
+3. **Guardar**.
+
+:::note
+La **aplicabilidad** puede gestionarse también desde la **SoA** para dejar rastro por organización.
+:::
+
+## Importar y exportar
+- **Importar CSV/Excel** para cargar catálogos masivos.
+- **Exportar** resultados filtrados para revisión fuera del sistema.
+
+## Relación con controles y SoA
+- Un requisito sin control mapeado aparecerá como **brecha** en *Mapeos*.
+- Desde el requisito puedes saltar al **control sugerido** y completar la **SoA**.
+
+:::tip
+Define una **convención de códigos** coherente con la norma oficial para facilitar auditorías.
+:::
