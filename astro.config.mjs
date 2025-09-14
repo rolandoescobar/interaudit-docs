@@ -61,8 +61,8 @@ export default defineConfig({
         {
           label: 'Soporte',
           items: [
-            { label: 'Tickets y ayuda', link: '/modulos/soporte/tickets' },
-            { label: 'FAQ', link: '/soporte/' },
+            { label: 'Tickets y ayuda', link: '/soporte/tickets-y-ayuda/' },
+            { label: 'Inicio de Soporte', link: '/soporte/' },
           ],
         },
         {
