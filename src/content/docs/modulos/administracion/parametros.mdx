@@ -1,0 +1,70 @@
+---
+title: "Administración · Parámetros del sistema"
+description: "Configura opciones globales: branding, seguridad, escalas de riesgo, BIA, estados/etiquetas, notificaciones y catálogos."
+---
+
+# Parámetros del sistema
+
+Los **Parámetros** definen cómo se comporta InterAudit a nivel global (según tus permisos).  
+Afectan navegación, reportes y valores por defecto en todos los módulos.
+
+![Parámetros del sistema](/images/screens/administracion/parametros/overview.png)
+
+## Secciones habituales
+
+### Branding y organización
+- **Nombre corto** y **logo** para cabecera y reportes.
+- **Favicon**, **tema** (claro/oscuro si aplica).
+- **Zona horaria** y **formato de fecha**.
+- **Organización por defecto** al iniciar sesión.
+
+### Seguridad y acceso
+- **2FA** y reglas de **contraseña**.
+- **Duración de sesión** / cierre por **inactividad**.
+- **SSO** / dominios permitidos (si tu instancia lo soporta).
+
+### Riesgos (matriz P×I)
+- Escalas de **Probabilidad (P)** e **Impacto (I)** (1–5 o Baja/Media/Alta).
+- Umbrales de **nivel**: *Bajo · Moderado · Alto · Crítico*.
+- **Estados** del riesgo (Borrador, Evaluado, En tratamiento, Cerrado).
+
+![Matriz P×I](/images/screens/administracion/parametros/matriz.png)
+
+### BIA (ISO 22317)
+- **Horizontes**: 1h · 4h · 8h · 24h · 72h · 7d.
+- Categorías: **Financiero**, **Legal/Regulatorio**, **Reputacional**, **Operativo/Servicio**, **Seg. de la Información (C/I/D)**.
+- Parámetros: **MTPD/MAO**, **RTO**, **RPO**, **MBCO** (por proceso/servicio).
+
+### Tickets y flujos
+- **Estados**: Abierto · En curso · En espera · Cerrado.
+- **Prioridades**: Baja · Media · Alta · (opcional Crítica).
+- **Categorías** y **etiquetas**.
+
+### Notificaciones
+- Plantillas de **correo**.
+- Recordatorios de **vencimientos** y **resúmenes** (frecuencia).
+
+### Catálogos
+- **Unidades/Áreas**, **Procesos/Servicios** por defecto.
+- **Etiquetas** estándar para informes y filtros.
+
+:::tip
+Tras cambiar escalas de **Riesgo** o **BIA**, revisa **Indicadores** y la **Matriz** para asegurar consistencia histórica.
+:::
+
+---
+
+## Buenas prácticas
+- Documenta cambios relevantes (quién, qué, cuándo).
+- Prueba primero en una **organización de pruebas**.
+- Mantén nombres **coherentes** en catálogos (evita duplicados con tildes o mayúsculas).
+
+## Solución de problemas
+**Los niveles de la matriz no cuadran** → Revisa umbrales y escala P/I.  
+**No veo opciones de SSO** → Tu instancia puede no tenerlo habilitado.  
+**Fechas con formato raro** → Ajusta **zona horaria** y **formato** en Branding.
+
+## Relacionado
+- [Riesgos · Matriz P×I y mapa de calor](/modulos/riesgos/matriz/)
+- [Riesgos · BIA](/modulos/riesgos/bia/)
+- [Soporte · Tickets y ayuda](/soporte/tickets-y-ayuda/)
