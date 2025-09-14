@@ -1,0 +1,61 @@
+---
+title: "Administración · Auditoría y bitácora"
+description: "Trazabilidad de cambios: quién, qué, cuándo y dónde. Filtros, exportación y buenas prácticas para evidencias."
+---
+
+# Auditoría y bitácora
+
+La **bitácora de auditoría** registra acciones clave realizadas en el sistema para asegurar **trazabilidad** y **evidencia** (quién hizo qué, cuándo y desde dónde).
+
+![Vista general de auditoría](/images/screens/administracion/auditoria/overview.png)
+
+## Antes de empezar
+- Rol recomendado: **Administrador** o **Auditor** (solo lectura).
+- Verifica la **organización activa** (los registros se filtran por contexto cuando aplica).
+
+---
+
+## ¿Qué se registra?
+- **Identidad del usuario** (ID/correo) y **rol** al momento del evento.
+- **Fecha y hora** (con zona horaria) y **origen** (IP/cliente).
+- **Recurso afectado** (módulo, entidad, ID) y **acción** (*crear, actualizar, eliminar, importar/exportar, login*).
+- **Cambios** aplicados (resumen o dif en campos permitidos).
+
+:::note
+Por privacidad, algunos campos sensibles pueden mostrarse **enmascarados**.
+:::
+
+---
+
+## Consultar y filtrar
+1. Ve a **Administración → Auditoría**.
+2. Usa filtros por **Rango de fechas**, **Usuario**, **Módulo**, **Acción** y **Resultado** (*éxito/error*).
+3. Ordena por **fecha** o **severidad**.
+
+![Filtros de auditoría](/images/screens/administracion/auditoria/filtros.png)
+
+**Búsqueda rápida**  
+Ingresa texto para encontrar por **ID de registro**, **correo**, **módulo** o **entidad**.
+
+---
+
+## Ver detalle de un evento
+Haz clic en un registro para ver:
+- **Contexto** (headers básicos, IP, agente si aplica).
+- **Recurso** (tipo e identificadores).
+- **Payload** resumido (antes/después) cuando esté disponible.
+- **Enlaces** a la entidad (p. ej., abrir el riesgo, activo, ticket, etc.).
+
+![Detalle de evento](/images/screens/administracion/auditoria/detalle.png)
+
+:::caution
+El **payload** puede mostrarse truncado para evitar exponer datos sensibles; usa **Exportar** si necesitas el registro completo.
+:::
+
+---
+
+## Exportar evidencias
+- **Exportar** el resultado filtrado (CSV/Excel).
+- Incluye columnas: `timestamp, usuario, rol, accion, modulo, entidad, entidad_id, resultado, ip, notas`.
+
+**Ejemplo CSV**
