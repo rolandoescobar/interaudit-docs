@@ -1,0 +1,44 @@
+---
+title: "Administración · Importar y exportar"
+description: "Carga masiva de datos y exportaciones: formatos CSV/Excel, validaciones, plantillas por módulo y resolución de errores."
+---
+
+# Importar y exportar
+
+Usa **Importar/Exportar** para mover datos entre ambientes o hacer cargas iniciales controladas.  
+Admite **CSV/Excel**, muestra **previsualización** y aplica **validaciones** antes de confirmar.
+
+![Importar/Exportar](/images/screens/administracion/import-export/overview.png)
+
+---
+
+## Exportar
+1. Abre el módulo (p. ej., **Riesgos**, **Activos**, **Requisitos**).
+2. Aplica **filtros** si quieres un subconjunto.
+3. Pulsa **Exportar** y descarga **CSV/Excel**.
+
+:::tip
+La exportación respeta filtros: úsalo para enviar extractos a comités.
+:::
+
+---
+
+## Importar (CSV/Excel)
+1. Descarga la **plantilla** del módulo o usa las columnas mínimas (abajo).
+2. Edita el archivo en **UTF-8**, separador **coma** `,` y comillas para textos con comas.
+3. Sube el archivo en **Importar** y revisa la **previsualización**.
+4. Corrige advertencias si aparecen y **Confirma**.
+
+![Previsualización de importación](/images/screens/administracion/import-export/preview.png)
+
+### Reglas generales
+- Encabezados exactos (sensibles a mayúsculas/acentos).
+- Fechas en formato `YYYY-MM-DD`.
+- Referencias (Unidad, Proceso, Activo, Usuario) **deben existir**.
+- Evita **duplicados**; usa “actualizar si existe” si tu instancia lo permite.
+
+---
+
+## Plantillas mínimas (ejemplos)
+
+**Activos**
