@@ -76,6 +76,8 @@ export default defineConfig({
 
         { label: 'Novedades', link: '/changelog/' },
       ],
+
+      customCss: ['/src/styles/colors.css'], // ⬅️ Añade esta línea
     }),
   ],
    redirects: { '/': '/inicio/' },
